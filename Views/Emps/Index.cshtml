@@ -5,6 +5,7 @@
 }
 
 <h2>Index</h2>
+@Html.Partial("OurPview")
 
 <table class="table">
     <tr>
@@ -23,21 +24,22 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Eid)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ename)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Edesig)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Edoj)
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Eid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ename)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Edesig)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Edoj)
+            </td>
+        </tr>
+    }
 
 </table>
